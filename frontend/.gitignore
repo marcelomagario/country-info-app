@@ -1,0 +1,2 @@
+node_modules
+# .env (for the test reason I will leave the .ENV in the project)
