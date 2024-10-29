@@ -9,13 +9,10 @@ const getAvailableCountries = async (req, res) => {
     }
 };
 
-
-
 const getCountryInfo = async (req, res) => {
     const { countryCode } = req.params;
     try {
         const bordersResponse = await axios.get(`https://date.nager.at/api/v3/CountryInfo/${countryCode}`);
-        // console.log(bordersResponse.data);
         const populationResponse = await axios.get(`https://countriesnow.space/api/v0.1/countries/population`);
         const flagResponse = await axios.get(`https://countriesnow.space/api/v0.1/countries/flag/images`);
         const borders = bordersResponse.data.borders || [];
@@ -24,14 +21,13 @@ const getCountryInfo = async (req, res) => {
 
         let population = null;
         if (populationData) {
-            // Acesse o array populationCounts e pegue o valor mais recente
             const latestPopulationData = populationData.populationCounts[populationData.populationCounts.length - 1];
             population = latestPopulationData ? latestPopulationData.value : null;
         }
 
-        const flag = Array.isArray(flagResponse.data) 
-            ? flagResponse.data.find(c => c.iso2 === countryCode)?.flag || '' 
-            : '';
+        const flag = flagResponse.data?.data 
+        ? flagResponse.data.data.find(c => c.iso2 === countryCode)?.flag || '' 
+        : '';
 
         const data = {
             borders,

@@ -19,8 +19,11 @@ const CountryInfo = () => {
             <h2>Country Info for {countryCode}</h2>
             {countryInfo && (
                 <div>
-                    {/* Render country info */}
+                    {/* Render borders */}
+                    <p>Borders: {countryInfo.borders.map(border => border.commonName).join(', ')}</p>
+                    {/* Render population */}
                     <p>Population: {countryInfo.population}</p>
+                    {/* Render flag */}
                     <img src={countryInfo.flag} alt={`${countryCode} flag`} />
                 </div>
             )}

@@ -1,6 +1,3 @@
-# country-info-app
-This project involves building two small applications to provide information about countries. 
-
 # Country Info App
 
 ## Overview
@@ -22,8 +19,7 @@ This application provides information about countries, including available count
 ### Setup
 1. Navigate to the `backend` directory.
 2. Install dependencies: `npm install`.
-3. Create a `.env` file with the necessary environment variables.
-4. Start the server: `node server.js`.
+3. Start the server: `node server.js`.
 
 ## Frontend
 
@@ -42,7 +38,6 @@ This application provides information about countries, including available count
 ### Setup
 1. Navigate to the `frontend` directory.
 2. Install dependencies: `npm install`.
-3. Create a `.env` file with the necessary environment variables.
-4. **Run the Application**: 
+3. **Run the Application**: 
    - Start the development server: `npm start`.
    - Open your browser and go to `http://localhost:3000` to view the app.
