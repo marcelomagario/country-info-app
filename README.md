@@ -1,43 +1,39 @@
-# Country Info App
+# 🌍 Country Info App
 
-## Overview
-This application provides information about countries, including available countries, border countries, and historical population data.
+![Node.js](https://img.shields.io/badge/Backend-Node.js-blue)
+![React](https://img.shields.io/badge/Frontend-React-green)
+![Chart.js](https://img.shields.io/badge/Charts-Chart.js-yellow)
 
-## Backend
+A full-stack application that displays detailed information about countries — including their neighbors, basic facts, and population history via interactive charts.
 
-### Technologies
-- Node.js
-- Express
+---
 
-### Endpoints
-- **GET /api/countries/available**: Returns a list of available countries.
-- **GET /api/countries/:countryCode**: Returns detailed information about a specific country.
+## 🚀 Tech Stack
 
-### Environment Variables
-- PORT: Port for the backend server (default: 5000).
+### Backend
+- Node.js + Express
+- RESTful API
+- Chart-ready JSON responses
 
-### Setup
-1. Navigate to the `backend` directory.
-2. Install dependencies: `npm install`.
-3. Start the server: `node server.js`.
-
-## Frontend
-
-### Technologies
+### Frontend
 - React
 - React Router
 - Chart.js
 
-### Components
-- **CountryList**: Displays a list of countries.
-- **CountryInfo**: Displays detailed information about the selected country.
+---
 
-### Environment Variables
-- REACT_APP_BACKEND_URL: Base URL for the backend API.
+## 🧩 Features
 
-### Setup
-1. Navigate to the `frontend` directory.
-2. Install dependencies: `npm install`.
-3. **Run the Application**: 
-   - Start the development server: `npm start`.
-   - Open your browser and go to `http://localhost:3000` to view the app.
+- ✅ List of available countries
+- ✅ Detail view with population and border data
+- ✅ Interactive charts with Chart.js
+- ✅ Dynamic routing with React Router
+- ✅ Clean and modular architecture
+
+---
+
+## ⚙️ Environment Variables
+
+### Backend (`.env`)
+```env
+PORT=5000
